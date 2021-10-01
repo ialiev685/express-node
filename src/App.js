@@ -1,8 +1,10 @@
 import { Container } from "./components/Container/Container.jsx";
 import { Navigation } from "./components/Navigation/Navigation.jsx";
 import { Switch, Route } from "react-router-dom";
-import { HomeViews } from "./views/HomeViews.jsx";
-import { ProductViews } from "./views/ProductViews.jsx";
+import { HomePage } from "./views/HomePage.jsx";
+import { ProductPage } from "./views/ProductPage.jsx";
+import { ItemProductPage } from "./views/ItemProductPage.jsx";
+
 import "./App.scss";
 
 function App() {
@@ -11,11 +13,15 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/">
-          <HomeViews />
+          <HomePage />
         </Route>
 
-        <Route path="/product">
-          <ProductViews />
+        <Route exact path="/product">
+          <ProductPage />
+        </Route>
+
+        <Route path="/product/:id">
+          <ItemProductPage />
         </Route>
       </Switch>
     </Container>

@@ -1,0 +1,4 @@
+console.log(path.resolve("./dateUtils.js")); //полный путь файла
+console.log(path.normalize("/home/ialiev/dateUtils.js")); //прописать путь в ручную
+console.log(path.extname("dateUtils.js")); //расширение
+console.log(path.join("/home", "dateUtils.js")); // соеденить пути и файлы
