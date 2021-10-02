@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { HomePage } from "./views/HomePage.jsx";
 import { ProductPage } from "./views/ProductPage.jsx";
 import { ItemProductPage } from "./views/ItemProductPage.jsx";
-
+import { Form } from "./components/Form/Form.jsx";
 import "./App.scss";
 
 function App() {
@@ -12,16 +12,20 @@ function App() {
     <Container>
       <Navigation />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/my-router">
           <HomePage />
         </Route>
 
-        <Route exact path="/product">
+        <Route exact path="/my-router/product">
           <ProductPage />
         </Route>
 
-        <Route path="/product/:id">
+        <Route path="/my-router/product/:id">
           <ItemProductPage />
+        </Route>
+
+        <Route path="/my-router/callback">
+          <Form />
         </Route>
       </Switch>
     </Container>
